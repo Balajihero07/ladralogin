@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-mongoose.connect('mongodb://localhost:27017/Database', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://balajisekar018:uZUu55BZ4lExsNTY@cluster0.g5bdphy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.on('error', () => console.log("Error in connecting to database"));
 db.once('open', () => console.log("Connected to database"));
